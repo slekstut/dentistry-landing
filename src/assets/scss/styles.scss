@@ -169,8 +169,9 @@ body {
  padding-left: 6vw;
  padding-right: 6vw;
  margin-top: 25em;
- overflow-x: hidden;
-position: relative;
+ overflow: hidden;
+ position: relative;
+
  .background-curve {
   background-image: url('/assets/svg/KreivesAsset3.svg');
   background-repeat: no-repeat;
@@ -225,11 +226,11 @@ position: relative;
 
     .doctor-text {
      box-shadow: 2px 2px 180px rgba(55, 63, 80, 0.5);
-
     }
+
     img {
      right: -3.5em;
-    position: absolute;
+     position: absolute;
     }
    }
 
@@ -238,7 +239,7 @@ position: relative;
     margin-top: -20.8em;
     right: -4.25em;
     position: absolute;
-    
+
    }
 
    .doctor-text {
@@ -273,7 +274,6 @@ position: relative;
       left: -0.2em;
       background: $black;
      }
-
     }
 
     p:nth-child(3) {
@@ -284,11 +284,10 @@ position: relative;
      padding-bottom: 1em;
 
     }
-
    }
-
   }
  }
+
  .background-curve2 {
   background-image: url('/assets/svg/KreivesAsset2.svg');
   background-repeat: no-repeat;
@@ -300,4 +299,163 @@ position: relative;
   left: -5em;
   z-index: -2;
  }
+}
+
+// ŠEŠTAS BLOKAS
+.chapter6 {
+ width: 100%;
+ height: 100vh;
+ padding-left: 6vw;
+ padding-right: 6vw;
+ margin-top: 2em;
+ overflow: hidden;
+ position: relative;
+
+ .text-wrapper {
+  .chapter {
+   position: relative;
+   color: $white;
+   font-size: 13.11rem;
+   font-weight: $black-font-weight;
+   text-align: right;
+   margin: .2em 0 0.4em 0;
+   text-shadow: 2px 2px 180px rgba(55, 63, 80, 0.3); // instead of 80px made 180px to be more similiar as in the task
+
+   &:before {
+    position: absolute;
+    content: '';
+    height: .065em;
+    right: .07em;
+    bottom: -.11em;
+    width: .35em;
+    background-color: $white;
+   }
+  }
+
+  h5 {
+   font-weight: $bold-font-weight;
+   font-size: 3.722rem;
+   margin-bottom: .3em;
+   color: $black;
+  }
+
+  h4 {
+   font-weight: $bold-font-weight;
+   font-size: 4.444rem;
+   color: $black;
+   text-indent: .8em;
+
+  }
+
+  h3 {
+   font-weight: $black-font-weight;
+   font-size: 6.666rem;
+   color: $pink;
+   padding-bottom: 1em;
+  }
+ }
+
+ p {
+  font-size: 3.333rem;
+  font-weight: $light-font-weight;
+  color: $black;
+  text-align: center;
+  padding-bottom: 1.2em;
+
+  span {
+   font-weight: $bold-font-weight;
+   font-size: 6.444rem;
+   color: $pink;
+
+  }
+ }
+
+ form {
+  display: grid;
+  place-content: center;
+  column-gap: 0;
+  row-gap: 5em;
+  grid-template-areas: "name mobile"
+   "submit submit";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 42% 42%;
+
+  .name__input {
+   grid-area: name;
+  }
+
+  .mobile__input {
+   grid-area: mobile;
+  }
+
+  .submit__input {
+   grid-area: submit;
+  }
+
+  input:nth-child(-n+2) {
+   height: 2em;
+   width: 13em;
+   border: 2px solid $black;
+   border-radius: 30px;
+   font-size: 3rem;
+   padding: .5em 2em;
+   margin-right: 2em;
+   display: grid;
+   justify-self: right;
+
+   &::placeholder {
+    color: $black;
+    opacity: .5;
+    font-size: 3rem;
+    text-align: center;
+   }
+  }
+
+  input:nth-child(3) {
+   font-size: 3.888rem;
+   font-weight: $bold-font-weight;
+   height: 2em;
+   width: 13em;
+   background: red;
+   color: $white;
+   border-radius: 30px;
+   text-transform: uppercase;
+   border: none;
+   display: grid;
+   justify-self: center;
+   box-shadow: 2px 2px 180px rgba(237, 66, 150, .6);
+
+  }
+ }
+ .arrow {
+  background-image: url('/assets/svg/KreivesAsset8.svg');
+ background-repeat: no-repeat;
+ background-size: 50%;
+ width: 100%;
+ height: 2em;
+ position: absolute;
+ top: 2em;
+ right: 1em;
+ z-index: 5;
+ }
+}
+
+.map {
+ background-image: url('/assets/img/map.png');
+ background-repeat: no-repeat;
+ background-size: 100%;
+ width: 100%;
+ height: 25em;
+ margin-top: 5em;
+ bottom: 0;
+ position: relative;
+}
+
+.footer-curve {
+ background-image: url('/assets/svg/KreivesAsset9.svg');
+ background-repeat: no-repeat;
+ background-size: 100%;
+ width: 100%;
+ height: 100%;
+ position: absolute;
 }
